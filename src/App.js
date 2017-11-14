@@ -23,7 +23,12 @@ function App() {
       <h1 id="pokemonName">POKEMON</h1>
     </div>
     <div id="pokemonAvatar">
-      <div id="blueScreen">
+      <div id="blueScreen" /><br/>
+      <div id="redCircle">&nbsp;</div>
+      <div id="burger">
+        <div class="burger"></div>
+        <div class="burger"></div>
+        <div class="burger"></div>
       </div>
     </div>
     <div id="pokemon-details">
