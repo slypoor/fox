@@ -13,9 +13,9 @@ function App() {
           <sub>by keano porcaro</sub>
           </p>
           <br/>
-          <label for="search"><font size="1">Go to ID (1-151)</font></label><br/>
-          <input id="search" class="search-button" type="text"></input><br/>
-          <input id="searchButton" class="search-button" type="button" value="Search"></input>
+          <label for="search"><font size="1">Go to ID (1-151)</font></label><br/><br/>
+          <label class="hash">#</label><input id="search" class="search-button" type="text"></input><br/><br/>
+          <input id="searchButton" class="search-button" type="button" value="SEARCH"></input>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@ function App() {
     </div>
     <div id="pokemon-details">
       <p id="pokemonID" class="details"><font size="1">NO</font><br/>
-        #ID
+        #000
       </p>
       <p id="pokemonHeight" class="details"><font size="1">HEIGHT</font><br/>
         0.00m
