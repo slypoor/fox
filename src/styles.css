@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
+html {
+position : relative;
+min-height : 100%;
+}
+
 body {
+  margin : 0 0 100px;
+  padding: 25px;
   font-family: 'Press Start 2P', cursive;
   color: #000;
   font-size: 16px;
-  padding: 0;
-  margin: 0;
 }
 
 hr {
@@ -32,7 +37,8 @@ hr {
 }
 
 #background {
-  margin-top: -100px;
+  position: relative;
+  margin-top: -200px;
   margin-left: 200px;
   width: 125%;
   height: 500px;
@@ -49,7 +55,7 @@ hr {
   position: relative;
   z-index: 1;
   margin-left: 625px;
-  margin-top: -200px;
+  margin-top: -190px;
   color: white;
 }
 
@@ -95,6 +101,32 @@ hr {
   background-color: white;
 }
 
+#pokemonAvatar {
+  position: absolute;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0.5px;
+  width: 200px;
+  height: 250px;
+  margin-left: 325px;
+  margin-top: -85px;
+  background-color: #f1fceb;
+}
+
+#pokemonAvatar #blueScreen {
+  position: relative;
+  width: 110%;
+  height: 200px;
+  margin-top: 8%;
+  margin-left: -10px;
+  background-color: #82cdd3;
+}
+
+#backID {
+  margin-left: 150px;
+}
+
 .search-button {
   width: 175px;
 }
@@ -118,6 +150,30 @@ hr {
     display:inline-block;
 }
 
+.footDivier {
+  width: 550px;
+  height: auto;
+  display: inline-block;
+}
+
 .segment {
   display: inline-block;
 }
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  height: 100px;
+  background-color: #efefef;
+  text-align: center;
+  z-index: -1;
+}
+
+a {color:black; text-decoration: none }      /* unvisited link */
+a:visited {color:black; text-decoration: none}  /* visited link */
+a:hover {color:black; text-decoration: none}  /* mouse over link */
+a:active {color:black; text-decoration: none}  /* selected link */

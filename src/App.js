@@ -22,6 +22,10 @@ function App() {
     <div id="header-text">
       <h1 id="pokemonName">POKEMON</h1>
     </div>
+    <div id="pokemonAvatar">
+      <div id="blueScreen">
+      </div>
+    </div>
     <div id="pokemon-details">
       <p id="pokemonID" class="details"><font size="1">NO</font><br/>
         #ID
@@ -39,6 +43,7 @@ function App() {
     <div id="pokemon-stats">
       <p>BASE STATS</p>
       <hr/>
+      <br/>
       <div class="segment">
         <label for="HP" class="baseStats">HP</label><br/><br/>
         <div id="HP" class="baseStats2">600</div>
@@ -70,6 +75,10 @@ function App() {
       </div>
     </div>
     </div>
+    <footer class="footer">
+    <br/><br/>
+    <a id="backID" href="">&lt; #000 Pokemon</a><div class="footDivier" /><a id="frontID" href="">Pokemon #000 &gt;</a>
+    </footer>
     </div>
   );
 }
