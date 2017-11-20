@@ -1,6 +1,25 @@
 import React from 'react';
 
-function App() {
+const API = 'https://pokeapi.co/api/v2/pokemon/';
+const PokemonID = '54';
+
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      pokemon: [],
+    };
+  }
+
+  componentWillMount() {
+    fetch(API + PokemonID)
+      .then(response => response.json())
+      .then(data => this.setState({ pokemon: data, stats: data.stats, type: data.types}));
+  }
+
+render() {
   return (
     <div id="header">
     <div id="background"></div>
@@ -20,7 +39,7 @@ function App() {
       </div>
     </div>
     <div id="header-text">
-      <h1 id="pokemonName">POKEMON</h1>
+      <h1 id="pokemonName">{this.state.pokemon.name}</h1>
     </div>
     <div id="pokemonAvatar">
       <div id="blueScreen" /><br/>
@@ -33,16 +52,15 @@ function App() {
     </div>
     <div id="pokemon-details">
       <p id="pokemonID" class="details"><font size="1">NO</font><br/>
-        #000
+        #{this.state.pokemon.id}
       </p>
       <p id="pokemonHeight" class="details"><font size="1">HEIGHT</font><br/>
-        0.00m
+        {this.state.pokemon.height/10}m
       </p>
       <p id="pokemonWeight" class="details"><font size="1">WEIGHT</font><br/>
-        00.0kg
+        {this.state.pokemon.weight/10}kg
       </p>
       <p id="pokemonType" class="details"><font size="1">TYPE</font><br/>
-        Water
       </p>
     </div>
     <div id="pokemon-stats">
@@ -86,6 +104,7 @@ function App() {
     </footer>
     </div>
   );
+}
 }
 
 export default App;
